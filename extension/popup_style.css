@@ -1,0 +1,10 @@
+body{
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    padding:0;
+}
+
+button:hover{
+    background-color: aquamarine;
+}

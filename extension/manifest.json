@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Chiguamigo",
+    "version": "0.1",
+    "description":"This extends the capabilities of the social media bot, giving context to the topic",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.jpg"
+    },
+    "icons": {
+
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "content_scripts": [ 
+        {
+            "matches": [ "https://x.com/"],
+            "js": ["page_content/interaction.js"],
+            "css": ["page_content/interaction.css"]
+        }
+    ],
+    "options_page": "options.html"
+
+
+}

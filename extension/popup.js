@@ -1,0 +1,1 @@
+document.getElementById('analisis').addEventListener("click", () => {alert("Button clicked");});
