@@ -9,7 +9,7 @@
         "default_icon": "logo.jpg"
     },
     "icons": {
-
+        "16": "logo.jpg"
     },
     "background": {
         "service_worker": "background.js"
