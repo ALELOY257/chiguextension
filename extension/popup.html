@@ -4,17 +4,30 @@
         <title>Chiguiamigo</title>
         <link rel="stylesheet" href="popup_style.css">
     </head>
+    <header>
+        <h1 id="titulo"> Chiguamigo</h1>
 
+        <p>Estoy aqui para ayudarte a estar seguro en las redes sociales</p>
+    </header>
     <body>
-        <div class="sidebar">
-            <h2>Bienvenido!</h2>
-            <button id="analisis">Analizar el trend</button>
+        <div id="sidebar">
+            <img src="logo.jpg" alt="logo principal" class="logoPrincipal">
+            <button id="analisis" class="sidebarButton">!</button>
+
+            <div class="containers">
+                <input type="text" id="boxContent" placeholder="Enter box content">
+                <button id="addBox" class="sidebarButton">+</button>
+            </div>
+            <button id="openUrlInput" class="sidebarButton">#</button>
+            <div id="urlInputContainer" class="hidden">
+                <input type="text" id="urlInput" placeholder="Anadir URL">
+                <button id="submitUrl">Deteccion</button>
+            </div>
         </div>
-        <div class="containers">
-            <input type="text" id="boxContent" placeholder="Enter box content">
-            <button id="addBox">Add Box</button>
+
+        <div id="mainGrid" class="grid-container">
+            
         </div>
-        <div id="mainGrid" class="grid-container"></div>
 
         <script src="popup.js"></script>
     </body>

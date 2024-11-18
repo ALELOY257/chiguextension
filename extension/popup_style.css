@@ -1,3 +1,4 @@
+
 body {
     width: 500px;
     height: 1000px;
@@ -5,49 +6,146 @@ body {
     padding:0;
     display: flex;
     justify-content: flex-end;
-    background-color: #606C38;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: black;
+    font-family: 'Poppins', sans-serif;
 }
 
-button:hover{
-    background-color: aquamarine;
-}
-
-button{
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: aquamarine;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
-
-.sidebar {
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    box-sizing: border-box;
+header{
+    font-family: 'Poppins', sans-serif;
     position: fixed;
     top: 0;
-    left: 0;
-    background-color: burlywood;
+    width: 450px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    background-color:#fff;
+    border-radius: 8%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    background: linear-gradient(180deg, #dbd6d6, #fff);
+}
+
+header h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+#sidebar { /* Styles the sidebar of buttons */
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;    
+    top: 50%;
+    right: 0;
+    background-color: #2b7a78;
     z-index: 1000;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    transform: translateY(-50%);
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1);
 
     
 }
 
-.containers{
-    width: 60px;
-    height: 100px;
-    padding: 10px;
-    background-color: gold;
-    text-align: center;
-    border-bottom: 2px solid #ddd;
-    overflow-y: auto;
+.sidebarButton{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+
+}
+
+.sidebarButton:hover{
+    background: #f4a261;
+    transform: scale(1.2);
+}
+
+#analisis{ /* boton de analizar trend*/
+    position: fixed;
+    top: 120px;
+
+}
+
+
+
+#openUrlInput{
+
+    text-align: center; 
+    position: fixed;
+    top: 220px;
+}
+
+.hidden{
+    display:none;
+}
+
+#urlInputContainer{
+    margin-top: 10px;
+    gap: 5px;
+}
+
+#urlInput{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    top: 230px;
+    right: 60px;
+}
+
+#submitUrl {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 245px;
+    right: 60px;
+}
+
+#submitUrl:hover {
+    background-color: #45a049;
+}
+
+
+
+
+.logoPrincipal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    display: block;
+    border-radius: 50%;
+
+}
+
+.containers{ /*The add box button space */
+    width: 30px;
+    height: 20px;
+    background-color: #fff;
+    text-align: center; 
+    position: fixed;
+    top: 150px;
+
 }
 
 .grid-container{
@@ -55,13 +153,43 @@ button{
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
     padding: 20px;
-    background-color: aquamarine;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top:140px;
+    width: 450px;
+    height: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .grid-box{
-    background-color: #fff;
+    background-color:#ffe8a1;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     word-wrap: break-word;
+}
+
+.grid-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* working zone style */
+
+
+
+/*Scrollbar */
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #000000;
+    border-radius: 10px;
 }
