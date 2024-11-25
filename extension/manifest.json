@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Chiguamigo",
-    "version": "0.1",
+    "version": "1.0",
     "description":"This extends the capabilities of the social media bot, giving context to the topic",
     "permissions": ["activeTab", "scripting"],
     "action": {
@@ -22,6 +22,10 @@
             "css": ["page_content/interaction.css"]
         }
     ],
+    "host_permissions":[
+        "https://www.virustotal.com/*"
+    ],
+
     "options_page": "options.html"
 
 

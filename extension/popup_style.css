@@ -14,7 +14,9 @@ body {
 }
 
 header{
-    font-family: 'Poppins', sans-serif;
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
     position: fixed;
     top: 0;
     width: 450px;
@@ -25,7 +27,7 @@ header{
     background-color:#fff;
     border-radius: 8%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    background: linear-gradient(180deg, #dbd6d6, #fff);
+    background: linear-gradient(180deg, #e6e0e0, #fff);
 }
 
 header h1{
@@ -122,7 +124,41 @@ header h1{
 #submitUrl:hover {
     background-color: #45a049;
 }
+/*Para las ventanas de muestra de datos*/
+#vtdataContainer{
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    border-radius: 8px; 
+    z-index: 1000; 
 
+}
+.ocultar{
+    display:none;
+}
+#aceptar{
+    position: fixed;
+    right: 15px;
+    bottom: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    background-color: #f4a261;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#aceptar:hover{
+    background: #f4a261;
+    transform: scale(1.1);
+}
 
 
 

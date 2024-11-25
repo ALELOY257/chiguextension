@@ -3,6 +3,9 @@
     <head>
         <title>Chiguiamigo</title>
         <link rel="stylesheet" href="popup_style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lacquer&family=Sevillana&display=swap" rel="stylesheet">
     </head>
     <header>
         <h1 id="titulo"> Chiguamigo</h1>
@@ -22,12 +25,17 @@
             <div id="urlInputContainer" class="hidden">
                 <input type="text" id="urlInput" placeholder="Anadir URL">
                 <button id="submitUrl">Deteccion</button>
+                <pre id="result"></pre>
             </div>
         </div>
 
         <div id="mainGrid" class="grid-container">
-            
         </div>
+        <div id="vtdataContainer" class="ocultar">
+            <div id="data"></div>
+            <button id="aceptar">Ok</button>
+        </div>
+
 
         <script src="popup.js"></script>
     </body>
