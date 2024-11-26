@@ -76,7 +76,7 @@ header h1{
     transform: scale(1.2);
 }
 
-#analisis{ /* boton de analizar trend*/
+#infoCiberpaz{ /* boton de la informacion de la hackaton y el modulo de sensibilizacion*/
     position: fixed;
     top: 120px;
 

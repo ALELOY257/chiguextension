@@ -1,4 +1,4 @@
-document.getElementById('analisis').addEventListener("click", () => {alert("Button clicked");});
+document.getElementById('infoCiberpaz').addEventListener("click", () => {alert("Button clicked");});
 
 //add a box
 document.addEventListener('DOMContentLoaded', function(){
