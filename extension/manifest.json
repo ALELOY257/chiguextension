@@ -17,8 +17,8 @@
 
     "content_scripts": [ 
         {
-            "matches": [ "https://x.com/"],
-            "js": ["page_content/interaction.js"],
+            "matches": [ "https://x.com/*"],
+            "js": ["interaction.js"],
             "css": ["page_content/interaction.css"]
         }
     ],

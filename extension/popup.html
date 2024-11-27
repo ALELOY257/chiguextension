@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Chiguiamigo</title>
-        <link rel="stylesheet" href="popup_style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lacquer&family=Sevillana&display=swap" rel="stylesheet">
-    </head>
-    <header>
-        <h1 id="titulo"> Chiguamigo</h1>
 
-        <p>Estoy aqui para ayudarte a estar seguro en las redes sociales</p>
-    </header>
-    <body>
-        <div id="sidebar">
-            <img src="logo.jpg" alt="logo principal" class="logoPrincipal">
-            <button id="infoCiberpaz" class="sidebarButton">!</button>
+<head>
+    <title>Chiguiamigo</title>
+    <link rel="stylesheet" href="popup_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 
-            <div class="containers">
-                <input type="text" id="boxContent" placeholder="Enter box content">
-                <button id="addBox" class="sidebarButton">+</button>
-            </div>
-            <button id="openUrlInput" class="sidebarButton">#</button>
-            <div id="urlInputContainer" class="hidden">
-                <input type="text" id="urlInput" placeholder="Anadir URL">
-                <button id="submitUrl">Deteccion</button>
-                <pre id="result"></pre>
-            </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1 id="titulo"> Chiguamigo</h1>
+
+    <p>Estoy aqui para ayudarte a estar seguro en las redes sociales</p>
+</header>
+
+<body>
+    <div id="sidebar">
+        <img src="logoextension.jpg" alt="logo principal" class="logoPrincipal">
+        <button id="infoCiberpaz" class="sidebarButton">!</button>
+
+        <div class="containers">
+            <input type="text" id="boxContent" class="hidden" placeholder="Buscar trend">
+            <button id="search" class="hidden">Search</button>
+            <button id="addBox" class="sidebarButton">+</button>
         </div>
-
-        <div id="mainGrid" class="grid-container">
+        <button id="openUrlInput" class="sidebarButton">#</button>
+        <div id="urlInputContainer" class="hidden">
+            <input type="text" id="urlInput" placeholder="Anadir URL">
+            <button id="submitUrl">Deteccion</button>
         </div>
-        <div id="vtdataContainer" class="ocultar">
-            <div id="data"></div>
-            <button id="aceptar">Ok</button>
-        </div>
+    </div>
+
+    <div id="mainGrid" class="grid-container">
+    </div>
+    <div id="vtdataContainer" class="ocultar">
+        <div id="data"></div>
+        <button id="aceptar">Ok</button>
+    </div>
+    <div id="infoCiberpazContainer" class="hidden">
+        <h2>Informacion sobre Ciberpaz y la hackatón</h2>
+        <p>
+            Es un programa que moviliza a los colombianos para que ejerzan su ciudadanía digital y usen la tecnología de manera consciente, empática, incluyente, segura y responsable a través del manejo de las TIC <br>
+            Este programa es un ejercicio propuesto en el marco de la hackatón ciberpaz 2024 y en la socialización del modulo de sensibilización que se puede acceder en:
+        </p>
 
 
-        <script src="popup.js"></script>
-    </body>
+    <script src="popup.js"></script>
+</body>
+
 </html>

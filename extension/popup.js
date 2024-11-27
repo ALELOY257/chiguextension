@@ -3,6 +3,66 @@ document.getElementById('infoCiberpaz').addEventListener("click", () => {alert("
 //add a box
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('addBox').addEventListener('click',function(){
+        const content = document.getElementById("boxContent");
+        const searchBtn = document.getElementById('search');
+        content.classList.toggle('hidden');
+        searchBtn.classList.toggle('hidden');
+
+        searchBtn.addEventListener('click', function(){
+            const query = content.value;
+            console.log('query', query);
+            if (query.trim() === ''){
+            alert('añadir contenido');
+            return;}
+            
+            function responseHandler(response){
+                for (var i = 0; i < 8; i++){// 8 is the number of results to show
+                    var item = response.items[i];
+                    console.log(item);
+                    //creation of a new box
+                    const newBox = document.createElement('div');
+                    newBox.classList.add('grid-box');
+                    newBox.textContent = item.title + " - " + item.displayLink;
+
+                    newBox.addEventListener('click', function() {
+                        console.log("Box clicked")
+                        chrome.tabs.create({url: item.link});
+                    });
+
+                    document.getElementById("mainGrid").appendChild(newBox);
+                    document.getElementById('boxContent').value = '';
+                }
+            }
+            //loading the google search API
+            // Clear previous results
+            document.getElementById("mainGrid").innerHTML = '';
+
+            const apiKey = "AIzaSyCCCKYFPwStkxP_f0y_PWMMl0ymD6hrRJ8";
+            const cx = "61722d01bfafc434c";
+            const apiUrl =`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`;
+
+            fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                responseHandler(data)
+            })
+            .catch(error => {
+                console.error('Error fetching the API:', error);
+            });
+
+
+            content.classList.toggle('hidden');
+            searchBtn.classList.toggle('hidden');
+            
+
+        }
+    )
+
+});
+});
+/*
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('addBox').addEventListener('click',function(){
         const content = document.getElementById("boxContent").value;
         if (content.trim() === ''){
             alert('añadir contenido');
@@ -18,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         document.getElementById('boxContent').value = '';
     });
-});
+});*/
 
 //functions to use 
 function utf8Base64(url){
@@ -64,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function(){
         
         let finalUrl = "https://www.virustotal.com/api/v3/urls/"+urlId;
 
-        let rawData;
         
         //Call virustotal API from background
         chrome.runtime.sendMessage(
@@ -111,3 +170,32 @@ document.addEventListener('DOMContentLoaded', function(){
         urlInputContainter.classList.toggle('hidden');
     });
 });
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('addBox');
+    searchButton.addEventListener('click', () => {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.scripting.executeScript(
+                {
+                    target: { tabId: tabs[0].id },
+                    function: getExtractedQuery
+                },
+                (results) => {
+                    if (results && results[0] && results[0].result) {
+                        const query = results[0].result;
+                        chrome.runtime.sendMessage({ action: "openExtension", query: query });
+                    }
+                }
+            );
+        });
+    });
+});
+
+function getExtractedQuery() {
+    if (window.extractedQuery === null) {
+        console.log("No query was extracted.");
+    } else {
+        console.log("Extracted query pop:", window.extractedQuery);
+    }
+
+}*/  

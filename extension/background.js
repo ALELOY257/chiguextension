@@ -33,4 +33,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             return true;
     }
 })
-  
+
+
+//trigger handling, title of the topic
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === "openExtension"){
+        const searchQuery = message.query;
+        console.log("The query is", searchQuery);
+
+        chrome.runtime.sendMessage({action: "performSearch", query: searchQuery});
+    }
+})

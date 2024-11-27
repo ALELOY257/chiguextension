@@ -14,7 +14,7 @@ body {
 }
 
 header{
-    font-family: "Lacquer", system-ui;
+    font-family: "Chewy", system-ui;
     font-weight: 400;
     font-style: normal;
     position: fixed;
@@ -27,7 +27,7 @@ header{
     background-color:#fff;
     border-radius: 8%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    background: linear-gradient(180deg, #e6e0e0, #fff);
+    background: linear-gradient(180deg, #f3eeee, #fff);
 }
 
 header h1{
@@ -177,12 +177,35 @@ header h1{
 .containers{ /*The add box button space */
     width: 30px;
     height: 20px;
-    background-color: #fff;
     text-align: center; 
     position: fixed;
-    top: 150px;
+    top: 169px;
 
 }
+#boxContent{
+    position: fixed;
+    right: 50px;
+    top: 15px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    top: 173px;
+    right: 60px;
+}
+#search{
+    position: fixed;
+    right: 60px;
+    top: 188px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+}
+
 
 .grid-container{
     display: grid;
@@ -200,11 +223,15 @@ header h1{
 }
 
 .grid-box{
-    background-color:#ffe8a1;
+    background-color:floralwhite;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 12px;
     word-wrap: break-word;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .grid-box:hover {
@@ -212,7 +239,6 @@ header h1{
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* working zone style */
 
 
 
