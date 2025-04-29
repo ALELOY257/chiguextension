@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function(){
             // Clear previous results
             document.getElementById("mainGrid").innerHTML = '';
 
-            const apiKey = "AIzaSyCCCKYFPwStkxP_f0y_PWMMl0ymD6hrRJ8";
-            const cx = "61722d01bfafc434c";
+            const apiKey = "";
+            const cx = "";
             const apiUrl =`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`;
 
             fetch(apiUrl)
